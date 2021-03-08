@@ -1,0 +1,168 @@
+import tkinter as tk
+from tkinter.ttk import *
+from tkinter import ttk
+from tkinter import *
+
+
+root = Tk()
+root.geometry("412x717")
+root.configure(bg='white')
+root.title('Job Application')
+w = Canvas(root, width=500, height=15)
+w.create_rectangle(0, 0, 500, 500, fill="maroon")
+w.pack()
+
+label_0 = Label(root, text="Job Application", width=20, font='Arial 18 bold')
+label_0.place(x=90, y=18)
+label_0.configure(bg='white')
+
+label_1 = Label(root, text="Personal Information", font='Arial 13 bold')
+label_1.configure(foreground="maroon")
+label_1.place(x=5, y=55)
+label_1.configure(bg='white')
+
+label_01 = Label(root, text="Name", font='Arial 10')
+label_01.place(x=5, y=90)
+label_01.configure(bg='white')
+
+entry_1 = Entry(root)
+entry_1.place(x=153, y=90, width=110)
+entry_1.config(highlightbackground="red", highlightcolor="red")
+label_f = Label(root, text="First Name", font='Arial 5')
+label_f.place(x=150, y=108)
+label_f.configure(bg='white')
+
+entry_2 = Entry(root)
+entry_2.place(x=270, y=90, width=110)
+label_l = Label(root, text="Last Name", font='Arial 5')
+label_l.place(x=267, y=108)
+label_l.configure(bg='white')
+
+entry_3 = Entry(root)
+entry_3.place(x=153, y=125, width=220)
+entry_3.insert(0,'user@example.com')
+label_2 = Label(root, text="Email", font='Arial 10')
+label_2.place(x=5, y=125)
+label_2.configure(bg='white')
+
+
+label_3 = Label(root, text="Education", font='Arial 10')
+label_3.place(x=5, y=160)
+label_3.configure(bg='white')
+var1 = tk.StringVar()
+var1.set('Please choose')
+choose=ttk.Combobox(root,width=25,textvariable=var1)
+choose['values']=('12th pass','B.Tech','M.Tech','BS','MS','PhD')
+choose.place(x=153,y=160)
+choose.current()
+
+def browsefunc():
+    filename = filedialog.askopenfilename()
+    pathlabel.config(text=filename)
+
+label_4 = Label(root, text="Resume", font='Arial 10')
+label_4.place(x=5, y=195)
+label_4.configure(bg='white')
+btn = Button(root,width=30, text ='Choose file', command = browsefunc)
+btn.place(x=153,y=195)
+pathlabel=Label(root)
+
+
+
+label_5 = Label(root, text="Address", font='Arial 10')
+label_5.place(x=5, y=230)
+label_5.configure(bg='white')
+entry_4 = Entry(root)
+entry_4.place(x=153, y=230, width=230)
+label_6 = Label(root, text="Address 1", font='Arial 5')
+label_6.place(x=255, y=245)
+label_6.configure(bg='white')
+entry_5 = Entry(root)
+entry_5.place(x=153, y=260, width=230)
+label_7 = Label(root, text="Address 2", font='Arial 5')
+label_7.place(x=255, y=275)
+label_7.configure(bg='white')
+var = tk.StringVar()
+var.set('Select a Country')
+choose=ttk.Combobox(root,width=34,textvariable=var)
+choose['values']=('India','Bangladesh','Pakistan','Turkey','Portugal','Argentina')
+choose.place(x=153,y=290)
+choose.current()
+
+label_8 = Label(root, text="Phone Number", font='Arial 10')
+label_8.place(x=5, y=320)
+label_8.configure(bg='white')
+entry_6 = Entry(root)
+entry_6.place(x=153, y=320, width=40)
+entry_7 = Entry(root)
+entry_7.place(x=200, y=320, width=180)
+
+label_9 = Label(root, text="What are your hobbies?", font='Arial 10')
+label_9.place(x=5, y=355)
+label_9.configure(bg='white')
+entry_8 = Entry(root)
+entry_8.place(x=10, y=380, width=390)
+
+label_10 = Label(root, text="Previous/Current Employment details", font='Arial 13 bold')
+label_10.configure(foreground="maroon")
+label_10.place(x=5, y=420)
+label_10.configure(bg='white')
+
+entry_9 = Entry(root)
+entry_9.place(x=153, y=455, width=220)
+label_11 = Label(root, text="Company Name", font='Arial 10')
+label_11.place(x=5, y=455)
+label_11.configure(bg='white')
+
+entry_10 = Entry(root)
+entry_10.place(x=153, y=490, width=220)
+label_12 = Label(root, text="Job Title", font='Arial 10')
+label_12.place(x=5, y=490)
+label_12.configure(bg='white')
+
+entry_11 = Entry(root)
+entry_11.place(x=153, y=520, width=220)
+label_13 = Label(root, text="How long were you", font='Arial 10')
+label_13.place(x=5, y=520)
+label_13.configure(bg='white')
+label_14 = Label(root, text="here?", font='Arial 10')
+label_14.place(x=5, y=538)
+label_14.configure(bg='white')
+
+label_15 = Label(root, text="Reference #1", font='Arial 16 bold')
+label_15.configure(foreground="maroon")
+label_15.place(x=5, y=580)
+label_15.configure(bg='white')
+
+entry_12 = Entry(root)
+entry_12.place(x=153, y=615, width=220)
+label_16 = Label(root, text="Name", font='Arial 10')
+label_16.place(x=5, y=615)
+label_16.configure(bg='white')
+entry_13 = Entry(root)
+entry_13.place(x=153, y=645, width=220)
+label_17 = Label(root, text="Phone", font='Arial 10')
+label_17.place(x=5, y=645)
+label_17.configure(bg='white')
+
+label_15 = Label(root, text="Reference #2", font='Arial 16 bold')
+label_15.configure(foreground="maroon")
+label_15.place(x=5, y=680)
+label_15.configure(bg='white')
+
+entry_12 = Entry(root)
+entry_12.place(x=153, y=715, width=220)
+label_16 = Label(root, text="Name", font='Arial 10')
+label_16.place(x=5, y=715)
+label_16.configure(bg='white')
+entry_13 = Entry(root)
+entry_13.place(x=153, y=745, width=220)
+label_17 = Label(root, text="Phone", font='Arial 10')
+label_17.place(x=5, y=745)
+label_17.configure(bg='white')
+
+button = Button(root, text = 'Apply',width=10, bg='maroon', fg='white')
+button.pack()
+button.place(x=150,y=780)
+
+root.mainloop()
