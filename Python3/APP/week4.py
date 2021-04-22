@@ -5,7 +5,7 @@ from tkinter import *
 
 
 root = Tk()
-root.geometry("412x717")
+root.geometry("412x750")
 root.configure(bg='white')
 root.title('Job Application')
 w = Canvas(root, width=500, height=15)
